@@ -9,5 +9,11 @@
 #define question8_hpp
 
 #include <stdio.h>
+#include <iostream>
+#include <vector>
+#include <cmath>
+using namespace std;
+
+void hw8_delenie();
 
 #endif /* question8_hpp */

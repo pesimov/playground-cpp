@@ -14,6 +14,8 @@
 #include "question4.hpp"
 #include "question5.hpp"
 #include "question6.hpp"
+#include "question7.hpp"
+#include "question8.hpp"
 
 using namespace std;
 
@@ -23,8 +25,8 @@ int main(int argc, const char * argv[]) {
     char hwOption = 0;
     
     do{
-
-    std:cin >> hwOption;
+        std::cout << "\n\n. Select choice for HW option or type 'e' to exit.\n";
+        std:cin >> hwOption;
     
     switch(hwOption){
         case '1':
@@ -49,6 +51,14 @@ int main(int argc, const char * argv[]) {
 
         case '6':
         hw6_reciprocal();
+        break;
+            
+        case '7':
+        hw7_bezout_inverser_solution();
+        break;
+            
+        case '8':
+        hw8_delenie();
         break;
             
         case 'e':
