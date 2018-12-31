@@ -11,7 +11,7 @@
 #include <stdio.h>
 #include <iostream>
 #include <vector>
-#include <cmath>
+
 using namespace std;
 
 void hw8_delenie();

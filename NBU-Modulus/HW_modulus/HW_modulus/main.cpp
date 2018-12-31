@@ -16,13 +16,15 @@
 #include "question6.hpp"
 #include "question7.hpp"
 #include "question8.hpp"
+#include "question9.hpp"
+#include "question10.hpp"
 
 using namespace std;
 
 int main(int argc, const char * argv[]) {
     // insert code here...
     std::cout << "Hello. This is modulus HW command line options. Select choice for HW option or type 'e' to exit.\n";
-    char hwOption = 0;
+    char hwOption = '0';
     
     do{
         std::cout << "\n\n. Select choice for HW option or type 'e' to exit.\n";
@@ -59,6 +61,14 @@ int main(int argc, const char * argv[]) {
             
         case '8':
         hw8_delenie();
+        break;
+            
+        case '9':
+        hw9_power_first_method();
+        break;
+            
+        case 'q':
+        hw10_power_second_method();
         break;
             
         case 'e':

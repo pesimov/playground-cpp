@@ -7,7 +7,7 @@
 
 #include "question8.hpp"
 
-int* hw5_mult_vec_to_one(int n){
+int* hw5_mult_vec_to_one_q8(int n){
     
     //std::vector<int> multipleToOne;
     auto multipleToOneArray = new int [n][2]();
@@ -41,9 +41,9 @@ int* hw5_mult_vec_to_one(int n){
     return (int*) multipleToOneArray;
 }
 
-int hw6_reciprocal_int(int n, int m_recip){
+int hw6_reciprocal_int_q8(int n, int m_recip){
 
-    auto arrComb = hw5_mult_vec_to_one(n);
+    auto arrComb = hw5_mult_vec_to_one_q8(n);
     // print all elements
     std::cout << "print all elements.";
     for (int r=0; r<n; r++){
@@ -77,7 +77,7 @@ void hw8_delenie(){
     
     int m = 0;
     std::cin >> m;
-    int m_recip = hw6_reciprocal_int(n, m);
+    int m_recip = hw6_reciprocal_int_q8(n, m);
     
     std::cout << "Value to divide from \n";
     
