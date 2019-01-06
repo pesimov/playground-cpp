@@ -34,26 +34,26 @@ void hw7_bezout_inverser_solution(){
     int new_r_int = (int) new_r;
     int counter = 0;
     
-    while ((abs(new_r) > 0.0001 || (new_r_int > 0)) && counter < 1000){
+    while ((abs(new_s) > 0.01 ) && (new_r > 0 ) && counter < 1000){
         cout << "Counter value is:" << counter << endl;
         ++counter;
         //new_r = (double) new_r_int;
-        double quotient = ((double) n) / new_r;
+        int quotient = int(((double) n) / new_r);
         //double tmp_new_s = new_s;
         new_s = s - quotient * new_s;
         s = new_s;
         
         //double tmp_new_r = new_r;
-        new_r = r - quotient * new_r;
-        new_r_int = (int) r - (int) quotient * (int) new_r;
+        new_r = r - ( quotient) * new_r;
+        new_r_int = (int) r - quotient * (int) new_r;
         r = new_r;
     }
     
-    if (r > 1.0 ){
+    if (r > 1 ){
         cout << "The value is not invertible" << endl;
     }
-    if (s < 0.0 ){
-        cout << "The reciprocal element of s is " << s << " or in modulus, it is: " << s + n << endl;
+    if (r < 0.0 ){
+        cout << "The reciprocal element of s is " << r << " or in modulus, it is: " << ((int(r) + n)%n) << endl;
     }
     
     cout << "\n" ;
