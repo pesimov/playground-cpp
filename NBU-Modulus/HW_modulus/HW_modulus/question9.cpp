@@ -7,6 +7,27 @@
 
 #include "question9.hpp"
 
+int raisePowerFirstMethod(int n, int a, int m){
+    int ans = 0;
+    
+    //find k - lowest possible power at which a^k mod n = 1 mod n
+    int k_iter = 0;
+    int a_power_to_k_iter_mod = 0;
+    do{
+        k_iter++;
+        long a_power_to_k_iter = pow(a,k_iter);
+        a_power_to_k_iter_mod = a_power_to_k_iter % n;
+        //cout << "a_power_to_k_iter_mod " << a_power_to_k_iter_mod << endl;
+    }while(a_power_to_k_iter_mod != 1);
+    
+    int m_modulus_k = m % k_iter;
+    int a_raised_to_power = pow(a, m_modulus_k);
+    //int a_raised_to_power = 0;
+    int a_raised_to_power_modulus = a_raised_to_power % n;
+    ans = a_raised_to_power_modulus;
+    return ans;
+}
+
 void hw9_power_first_method(){
     std::cout << "Value for n\n";
     
@@ -27,19 +48,9 @@ void hw9_power_first_method(){
     int m = 0;
     std::cin >> m;
     
-    //find k - lowest possible power at which a^k mod n = 1 mod n
-    int k_iter = 0;
-    int a_power_to_k_iter_mod = 0;
-    do{
-        k_iter++;
-        long a_power_to_k_iter = pow(a,k_iter);
-        a_power_to_k_iter_mod = a_power_to_k_iter % n;
-        cout << "a_power_to_k_iter_mod " << a_power_to_k_iter_mod << endl;
-    }while(a_power_to_k_iter_mod != 1);
+    //a^m modulus n
+    int ans = raisePowerFirstMethod(n, a, m);
     
-    int m_modulus_k = m % k_iter;
-    int a_raised_to_power = pow(a, m_modulus_k);
-    //int a_raised_to_power = 0;
-    int a_raised_to_power_modulus = a_raised_to_power % n;
-    cout << "The raised a to the power m in ring n is:" << a_raised_to_power_modulus << endl;
+
+    cout << "The raised a to the power m in ring n is:" << ans % n << endl;
 }

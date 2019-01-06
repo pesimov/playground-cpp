@@ -9,5 +9,6 @@
 #define question13_hpp
 
 #include <stdio.h>
+void hw13_find_all_primitive_roots();
 
 #endif /* question13_hpp */

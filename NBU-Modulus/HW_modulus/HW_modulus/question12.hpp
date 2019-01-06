@@ -16,5 +16,6 @@
 using namespace std;
 
 void hw12_check_set_root();
-
+bool checkPrimitivenKoren(int value, int n);
+    
 #endif /* question12_hpp */

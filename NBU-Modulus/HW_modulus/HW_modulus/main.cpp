@@ -19,6 +19,9 @@
 #include "question9.hpp"
 #include "question10.hpp"
 #include "question11.hpp"
+#include "question12.hpp"
+#include "question13.hpp"
+//#include "question14.hpp"
 
 using namespace std;
 
@@ -68,13 +71,24 @@ int main(int argc, const char * argv[]) {
         hw9_power_first_method();
         break;
             
-        case 'q':
+        case 'q'://10
         hw10_power_second_method();
         break;
             
-        case 'w':
+        case 'w'://11
         hw11_check_prime();
         break;
+            
+        case 'r'://12
+        hw12_check_set_root();
+        break;
+            
+        case 't'://13
+        hw13_find_all_primitive_roots();
+        break;
+            
+            
+            
             
         case 'e':
         std::cout << "Exiting";

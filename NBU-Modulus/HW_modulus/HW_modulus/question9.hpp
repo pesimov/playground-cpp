@@ -16,5 +16,6 @@
 using namespace std;
 
 void hw9_power_first_method();
+int raisePowerFirstMethod(int n, int a, int m);
 
 #endif /* question9_hpp */
