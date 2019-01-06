@@ -15,4 +15,6 @@
 using namespace std;
 
 void hw5_mult_array_to_one();
+void fillArray(int multipleToOneArray[][2], int n);
+
 #endif /* question5_hpp */
