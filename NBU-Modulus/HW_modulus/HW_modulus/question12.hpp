@@ -9,5 +9,12 @@
 #define question12_hpp
 
 #include <stdio.h>
+#include <iostream>
+#include <vector>
+#include <cmath>
+
+using namespace std;
+
+void hw12_check_set_root();
 
 #endif /* question12_hpp */

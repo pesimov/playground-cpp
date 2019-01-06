@@ -18,6 +18,7 @@
 #include "question8.hpp"
 #include "question9.hpp"
 #include "question10.hpp"
+#include "question11.hpp"
 
 using namespace std;
 
@@ -69,6 +70,10 @@ int main(int argc, const char * argv[]) {
             
         case 'q':
         hw10_power_second_method();
+        break;
+            
+        case 'w':
+        hw11_check_prime();
         break;
             
         case 'e':
