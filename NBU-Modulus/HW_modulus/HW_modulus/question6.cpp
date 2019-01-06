@@ -26,7 +26,7 @@ void hw6_reciprocal(){
     std::cout << "print all elements.";
 
     for (int r=0; r<n; r++){
-        cout << "dwe: Reciprochnata stoinost na " <<arrComb[r][0] <<  " e " << arrComb[r][1];
+        cout << "Reciprochnata stoinost na " <<arrComb[r][0] <<  " e " << arrComb[r][1];
         ////use *arrComb to get the value of the integer that the pointer arrComb is
         cout << "\n" ;
     }

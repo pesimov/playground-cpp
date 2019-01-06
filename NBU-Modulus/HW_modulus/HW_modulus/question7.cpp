@@ -49,7 +49,7 @@ void hw7_bezout_inverser_solution(){
         r = new_r;
     }
     
-    if (r > 1 ){
+    if (s > 1 ){
         cout << "The value is not invertible" << endl;
     }
     if (r < 0.0 ){

@@ -6,8 +6,10 @@
 //
 
 #include "question8.hpp"
+#include "question5.hpp"
+//will use code from question 5
 
-int* hw5_mult_vec_to_one_q8(int n){
+/*int* hw5_mult_vec_to_one_q8(int n){
     
     //std::vector<int> multipleToOne;
     auto multipleToOneArray = new int [n][2]();
@@ -61,7 +63,9 @@ int hw6_reciprocal_int_q8(int n, int m_recip){
     }
     cout << "\n" ;
     return -1;
-}
+}*/
+
+
 void hw8_delenie(){
     std::cout << "Value for n\n";
     
@@ -77,14 +81,29 @@ void hw8_delenie(){
     
     int m = 0;
     std::cin >> m;
-    int m_recip = hw6_reciprocal_int_q8(n, m);
+
+    int arrComb [n][2];
+    fillArray(arrComb,n);
+    int m_recip = -1;
+    for (int r=0; r<n; r++){
+        if(arrComb[r][0] == m){
+            cout << "Reciprochnata stoinost na " <<arrComb[r][0] <<  " e " << arrComb[r][1];
+            m_recip = arrComb[r][1];
+        }
+    }
+    if(m_recip == -1){
+        std::cout << "Does not have reciprocal value. Exit function. \n";
+    }else{
+        
+        std::cout << "Value to divide from \n";
+        
+        int to_divide = 0;
+        std::cin >> to_divide;
+        
+        int mult = (to_divide * m_recip) % n;
+        
+        cout << "\n The division in ring " << n << "of value "<< to_divide << " by " << m << " is " << mult;
+    }
     
-    std::cout << "Value to divide from \n";
-    
-    int to_divide = 0;
-    std::cin >> to_divide;
-    
-    int mult = (to_divide * m_recip) % n;
-    
-    cout << "\n The division in ring " << n << "of value "<< to_divide << " by " << m << " is " << mult;
+    //int m_recip = hw6_reciprocal_int_q8(n, m);
 }
