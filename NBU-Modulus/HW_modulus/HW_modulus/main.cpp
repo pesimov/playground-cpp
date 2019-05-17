@@ -21,7 +21,7 @@
 #include "question11.hpp"
 #include "question12.hpp"
 #include "question13.hpp"
-//#include "question14.hpp"
+#include "question14.hpp"
 
 using namespace std;
 
@@ -87,7 +87,9 @@ int main(int argc, const char * argv[]) {
         hw13_find_all_primitive_roots();
         break;
             
-            
+        case 'y'://14
+        hw14_discrete_logarithm();
+        break;
             
             
         case 'e':
